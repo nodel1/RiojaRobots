@@ -1,16 +1,16 @@
 package CasaRural;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Cliente {
-    private List<Servicio> serviciosUtilizados = new ArrayList<>();
+    private Set<Servicio> serviciosUtilizados = new HashSet<>();
 
     public void agregarServicio(Servicio servicio) {
         serviciosUtilizados.add(servicio);
     }
 
-    public List<Servicio> getServiciosUtilizados() {         //revisar lo del list si uno o otro
+    public Set<Servicio> getServiciosUtilizados() {
         return serviciosUtilizados;
     }
 }

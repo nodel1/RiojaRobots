@@ -8,6 +8,6 @@ public class Alojamiento implements Servicio {
 
     @Override
     public double getCosto() {
-        return 300; // Precio basico
+        return 300;
     }
 }

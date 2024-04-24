@@ -1,17 +1,13 @@
 package CasaRural;
 
-public class PaseoCaballo extends ServicioDecorator {
-    public PaseoCaballo(Servicio servicioDecorado) {
-        super(servicioDecorado);
-    }
-
+public class PaseoCaballo implements Servicio {
     @Override
     public String getDescripcion() {
-        return servicioDecorado.getDescripcion() + ", paseo a caballo";
+        return "paseo a caballo";
     }
 
     @Override
     public double getCosto() {
-        return servicioDecorado.getCosto() + 100; // Precio paseo a caballo
+        return 100;
     }
 }
