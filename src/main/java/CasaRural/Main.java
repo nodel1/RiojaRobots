@@ -10,8 +10,11 @@ public class Main {
         cliente.agregarServicio(new Excursion1());
         cliente.agregarServicio(new SalidaTardia());
 
+        System.out.println("Servicios utilizados:");
+        for (Servicio servicio : cliente.getServiciosUtilizados()) {
+            System.out.println("- " + servicio.getDescripcion());
+        }
 
-        System.out.println("Servicios utilizados: " + cliente.getServiciosUtilizados().stream().map(Servicio::getDescripcion).collect(Collectors.joining(", ")));
 
         System.out.println("Costo: " + Calculadora.calcularTotal(cliente) + "€");
     }
